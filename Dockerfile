@@ -31,7 +31,7 @@ RUN set -ex \
     ; do \
     gpg --keyserver pool.sks-keyservers.net --recv-keys "$key"; \
     done \
- && apt-get update && apt-get install -y curl ca-certificates imagemagick --no-install-recommends \
+ && apt-get update && apt-get install -y curl ca-certificates imagemagick handbrake-cli --no-install-recommends \
  && rm -rf /var/lib/apt/lists/* \
  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
